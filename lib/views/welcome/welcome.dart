@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../login/login_signup.dart';
 
+import '../../themes/app_theme.dart';
+
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
@@ -9,6 +11,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,10 +22,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
                 colors: [
-                  Colors.lightBlueAccent,
-                  Colors.deepPurple,
-                  Colors.purpleAccent,
-
+                  Theme.of(context).primaryColor,
+                  Theme.of(context).colorScheme.onSecondary,
                 ]
               )
             ),
